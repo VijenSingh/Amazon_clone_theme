@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+
+    <!-- Amazon FavIcon -->
+    <link rel="icon" href="img/flag/Amazon_icon.png" image="image/gif" size="16x16">
+
+    <!-- font awesome css cdn-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+    <!--bootstap css local-->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Amazon Navbar</title>
+</head>
+
+<body>
+    <!--Navbar start-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <button class="btn btn-outline-light"><i class="fas fa-sliders-h"></i></button>
+        <div class="container-fluid">
+            <a class="navbar-brand pl-2" href="#">
+                <img src="img/logo.png" height="30" width="100" alt="amazon logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- search bar start -->
+                <form class="form-inline px-lg-5" novalidate method="get">
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" name="bntCategory" type="button"
+                                    id="btnCategoryDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                                    All
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                                    <li><a class="dropdown-item" href="#">All</a></li>
+                                    <li><a class="dropdown-item" href="#">Smart phone</a></li>
+                                    <li><a class="dropdown-item" href="#">Kichan Hardware</a></li>
+                                    <li><a class="dropdown-item" href="#">Prime Deals</a></li>
+                                    <li><a class="dropdown-item" href="#">Books</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" size="50" name="query" id="query">
+                        <input type="text" name="category" id="category" value="book" hidden>
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-search"></i>
+
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- search bar end -->
+                <ul class="navbar-nav">
+                    <!-- prefered language start -->
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link " href="#" id="prefLanguageDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-2x fa-language"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+                            <form class="p-3">
+                                <div class="dropdown-divider"></div>
+                                <div class="custom-control custom-radio mb-2">
+                                    <input class="custom-control-input" type="radio" name="prefLang" id="englishLang"
+                                        value="english">
+                                    <label class="custom-control-label" for="englishLang">
+                                        <img src="img/flag/english.png" alt="uk flag" height="30" width="50">
+                                    </label>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <div class="custom-control custom-radio mb-2">
+                                    <input class="custom-control-input" type="radio" name="prefLang" id="hindiLang"
+                                        value="hindi">
+                                    <label class="custom-control-label" for="hindiLang">
+                                        <img src="img/flag/hindi.png" alt="india flag" height="30" width="50">
+                                    </label>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                            </form>
+                        </div>
+                    </li>
+                    <!-- prefered language ends -->
+
+                    <!-- user account start -->
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link " href="login.html" id="userAccount" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-2x fa-user-circle"></i>
+
+                        </a>
+                        <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+                            <div class="d-flex flex-column justify-content-center">
+                                <a href="#" class="btn btn-warning w-75 btn-sm fw-bold">Signin</a>
+                                <small class="text-muted">New customer? <a href="#">Start here.</a></small>
+                            </div>
+
+                        </div>
+                    </li>
+                    <!-- user account ends -->
+                    <!-- shoping card start -->
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+                            <i class="fas fa-2x text-light fa-shopping-cart"></i>
+                            <span class="badge bg-warning">10</span>
+                        </a>
+                    </li>
+                    <!-- shoping card ends -->
+
+
+            </div>
+        </div>
+    </nav>
+    <!--Navbar end-->
+
+    <!-- Login card form start -->
+
+    <div class="container mt-5">
+        <div class="card mx-auto mt-5 pb-3 shadow rounded" style="width: 25rem;">
+
+            <div class="card-body">
+                <h4 class="card-title">Login</h4>
+                <!-- Login Form start-->
+                <form novalidate>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Email: </label>
+                        <input type="email" name="email" placeholder="abc@abc.com" class="form-control" id="userEmail"
+                            aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userPassword" class="form-label">Password: </label>
+                        <input type="password" class="form-control" placeholder="******" name="password"
+                            id="userPassword" aria-describedby="passwordHelp">
+                        <div id="passwordHelp" class="form-text">Password must be 6 charactors.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-warning w-100 shadow rounded">Signin</button>
+                </form> <!-- Login Form ends-->
+
+                <!-- OR Seperator -->
+                
+                <hr class="hr-text" data-content="New to Amazon?">
+                <!-- create account button -->
+                <a href="register.html" class="btn btn-sm btn-dark w-100"> Create your amazon account</a>
+                <a href="#" class="btn btn-outline-success btn-sm w-100 mt-2">
+                    <i class="fab fa-google"></i> Sign in with google
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-sm w-100 mt-2">
+                    <i class="fab fa-facebook-square"></i> Sign in with facebook
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Login card form ends-->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <!--custom javascript-->
+
+    <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>
