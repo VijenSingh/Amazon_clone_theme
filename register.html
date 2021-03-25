@@ -18,13 +18,13 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
 
-     <!-- Bootstrap CSS Local -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Drawer CSS File -->
-  <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/custom.css">
-  <title>Amazon : Login</title>
+    <!-- Bootstrap CSS Local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Drawer CSS File -->
+    <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Amazon : Register</title>
 </head>
 
 <body>
@@ -159,15 +159,21 @@
     </nav>
     <!--Navbar end-->
 
-    <!-- Login card form start -->
+    <!-- Register card form start -->
 
     <div class="container mt-5">
         <div class="card mx-auto mt-5 pb-3 shadow rounded" style="width: 25rem;">
 
             <div class="card-body">
-                <h4 class="card-title">Login</h4>
-                <!-- Login Form start-->
+                <h4 class="card-title">Register</h4>
+                <!-- Register Form start-->
                 <form novalidate>
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Your name </label>
+                        <input type="text" name="name" placeholder="abc" class="form-control" id="userName">
+                            
+                        
+                    </div>
                     <div class="mb-3">
                         <label for="userEmail" class="form-label">Email: </label>
                         <input type="email" name="email" placeholder="abc@abc.com" class="form-control" id="userEmail"
@@ -180,15 +186,23 @@
                             id="userPassword" aria-describedby="passwordHelp">
                         <div id="passwordHelp" class="form-text"><i class="fas text-primary fa-info"></i> Password must be 6 charactors.</div>
                     </div>
+                    <div class="mb-3">
+                        <label for="userPassword2" class="form-label">Enter again password: </label>
+                        <input type="password" class="form-control" placeholder="******" name="password"
+                            id="userPassword2" aria-describedby="passwordHelp2">
+                        <div id="passwordHelp2" class="form-text"><i class="fas text-primary fa-info"></i> Password must be match above.</div>
+                    </div>
 
-                    <button type="submit" class="btn btn-warning w-100 shadow rounded">Signin</button>
-                </form> <!-- Login Form ends-->
+                    <button type="submit" class="btn btn-warning w-100 shadow rounded">Register</button>
+                </form> <!-- Register Form ends-->
 
                 <!-- OR Seperator -->
 
-                <hr class="hr-text" data-content="New to Amazon?">
+                <hr class="hr-text" data-content="OR">
                 <!-- create account button -->
-                <a href="register.html" class="btn btn-sm btn-dark w-100"> Create your amazon account</a>
+                
+                <p class="text-center">Already have an account? <a href="login.html">Signin <i class="fas fa-caret-right"></i></a></p>
+
                 <a href="#" class="btn btn-outline-success btn-sm w-100 mt-2">
                     <i class="fab fa-google"></i> Sign in with google
                 </a>
@@ -200,7 +214,7 @@
         </div>
     </div>
 
-    <!-- Login card form ends-->
+    <!-- Register card form ends-->
 
 
     <!-- Optional JavaScript; choose one of the two! -->
