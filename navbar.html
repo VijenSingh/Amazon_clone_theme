@@ -8,7 +8,8 @@
     <!-- Bootstrap CSS -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
 
-
+<!-- Amazon FavIcon -->
+<link rel="icon" href="img/flag/Amazon_icon.png" image= "image/gif" size="16x16">
 
 <!-- font awesome css cdn-->
 
@@ -23,45 +24,99 @@
   </head>
   <body>
    <!--Navbar start-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <button class="btn btn-outline-light"><i class="fas fa-sliders-h"></i></button>
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand pl-2" href="#">
               <img src="img/logo.png" height="30" width="100" alt="amazon logo">  
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <form>
+            <!-- search bar start -->
+              <form class="form-inline px-lg-5" novalidate method="get">
+
+                <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" name="bntCategory" type="button" id="btnCategoryDropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                     All
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                      <li><a class="dropdown-item" href="#">All</a></li>
+                      <li><a class="dropdown-item" href="#">Smart phone</a></li>
+                      <li><a class="dropdown-item" href="#">Kichan Hardware</a></li>
+                      <li><a class="dropdown-item" href="#">Prime Deals</a></li>
+                      <li><a class="dropdown-item" href="#">Books</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="text" class="form-control" size="50" name="query" id="query">
+                <input type="text" name="category" id="category" value="book" hidden>
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-warning">
+                    <i class="fas fa-search"></i>  
+                  
+                  </button>
+                </div>
+                </div>
                   
               </form>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+              <!-- search bar end -->
+            <ul class="navbar-nav">
+              <!-- prefered language start -->
+              <li class="nav-item dropdown px-2">
+                <a class="nav-link " href="#" id="prefLanguageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-2x fa-language"></i>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+                  <form class="p-3">
+                    <div class="dropdown-divider"></div>
+                    <div class="custom-control custom-radio mb-2">
+                      <input class="custom-control-input" type="radio" name="prefLang" id="englishLang" value="english">
+                      <label class="custom-control-label" for="englishLang" >
+                       <img src="img/flag/english.png" alt="uk flag" height="30" width="50">
+                      </label>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="custom-control custom-radio mb-2">
+                      <input class="custom-control-input" type="radio" name="prefLang" id="hindiLang" value="hindi">
+                      <label class="custom-control-label" for="hindiLang" >
+                        <img src="img/flag/hindi.png" alt="india flag" height="30" width="50">
+                      </label>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                  </form>
+                </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <!-- prefered language ends -->
+             
+              <!-- user account start -->
+                <li class="nav-item dropdown px-2">
+                  <a class="nav-link " href="#" id="userAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-2x fa-user-circle"></i>
+                    
+                  </a>
+                  <div class="dropdown-menu px-3"  aria-labelledby="userAccount">
+                    <div class="d-flex flex-column justify-content-center">
+                      <a href="#" class="btn btn-warning w-75 btn-sm fw-bold" >Signin</a>
+                      <small class="text-muted">New customer? <a href="#">Start here.</a></small>
+                    </div>
+                    
+                  </div>
+                </li>
+                <!-- user account ends -->
+              <!-- shoping card start -->
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+                  <i class="fas fa-2x text-light fa-shopping-cart"></i>
+                  <span class="badge bg-warning">10</span>
+                </a>
               </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+              <!-- shoping card ends -->
+            
+            
           </div>
         </div>
       </nav>
